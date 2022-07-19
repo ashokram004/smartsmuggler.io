@@ -1,0 +1,386 @@
+body {
+    scroll-behavior: auto;
+    overflow: hidden;
+    image-rendering: crisp-edges;
+    background-image: url("images/grassground.jpg");
+    background-size: 200px 200px;
+    margin-top: 10px;
+
+
+}
+
+#tree {
+    position: absolute;
+    left: 1180px;
+    top: 25px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree2 {
+    position: absolute;
+    left: 60px;
+    top: 460px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree3 {
+    position: absolute;
+    left: 30px;
+    top: 210px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree4 {
+    position: absolute;
+    left: 1480px;
+    top: 510px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree5 {
+    position: absolute;
+    left: 1580px;
+    top: 410px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree6 {
+    position: absolute;
+    left: 1700px;
+    top: 610px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree7 {
+    position: absolute;
+    left: 180px;
+    top: 410px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+#tree8 {
+    position: absolute;
+    left: 500px;
+    top: 750px;
+    height: 200px;
+    width: 150px;
+    background-image: url(images/tree.png);
+    background-size: 100% 100%;
+}
+
+
+#mine1,#mine2,#mine3
+{
+    background-image: url(images/mine.png);
+}
+
+
+
+
+#block {
+    overflow: hidden;
+    position: absolute;
+    left: 193px;
+    top: 120px;
+    border: 17px solid;
+    border-image: url("images/wall.jpg") 50 round;
+    width: 1500px;
+    height: 800px;
+    background-image: url(images/finalbg1.jpg);
+    background-size: 100px 100px;
+}
+
+
+#bush1 {
+    position: absolute;
+    left: 475px;
+    top: 575px;
+    height: 150px;
+    width: 150px;
+    background-image: url(images/bushh.png);
+    background-size: 100% 100%;
+}
+
+#bush2 {
+    position: absolute;
+    left: 175px;
+    top: 475px;
+    height: 150px;
+    width: 150px;
+    background-image: url(images/bushh.png);
+    background-size: 100% 100%;
+}
+
+#bush3 {
+    position: absolute;
+    left: 875px;
+    top: 675px;
+    height: 150px;
+    width: 150px;
+    background-image: url(images/bushh.png);
+    background-size: 100% 100%;
+}
+
+#bush4 {
+    position: absolute;
+    left: 1275px;
+    top: 575px;
+    height: 150px;
+    width: 150px;
+    background-image: url(images/bushh.png);
+    background-size: 100% 100%;
+}
+
+#bush5 {
+    position: absolute;
+    left: 975px;
+    top: 375px;
+    height: 150px;
+    width: 150px;
+    background-image: url(images/bushh.png);
+    background-size: 100% 100%;
+}
+
+#sandal {
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    height: 120px;
+    width: 140px;
+    background-image: url(images/sandalnew.png);
+    background-size: 100% 100%;
+}
+
+
+#cage {
+    position: absolute;
+    left: 335px;
+    top: 80px;
+    height: 150px;
+    width: 170px;
+    background-image: url(images/digicage.png);
+    background-size: 100% 100%;
+}
+
+#sandal2 {
+    position: absolute;
+    left: 1050px;
+    top: 100px;
+    height: 120px;
+    width: 140px;
+    background-image: url(images/sandalnew.png);
+    background-size: 100% 100%;
+}
+
+
+#cage2 {
+    position: absolute;
+    left: 1035px;
+    top: 80px;
+    height: 150px;
+    width: 170px;
+    background-image: url(images/digicage.png);
+    background-size: 100% 100%;
+}
+
+#key {
+    position: absolute;
+    left: 1410px;
+    bottom: -1000px;
+    height: 60px;
+    width: 60px;
+    background-image: url(images/keyactivate.png);
+    background-size: 100% 100%;
+}
+
+#keyspace {
+    position: absolute;
+    left: -1000px;
+    opacity: 0%;
+    bottom: -1000px;
+    height: 100px;
+    width: 100px;
+    padding-top: 30px;
+    padding-left: 2px;
+    font-family: impact;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 3000ms;
+    animation: none;
+}
+
+#key2 {
+    position: absolute;
+    left: 1410px;
+    bottom: -1000px;
+    height: 60px;
+    width: 60px;
+    background-image: url(images/keyactivate.png);
+    background-size: 100% 100%;
+}
+
+#key2space {
+    position: absolute;
+    left: -1000px;
+    opacity: 0%;
+    bottom: -1000px;
+    height: 100px;
+    width: 100px;
+    padding-top: 30px;
+    padding-left: 2px;
+    font-family: impact;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 3000ms;
+    animation: none;
+}
+
+
+
+#truck {
+    position: absolute;
+    height: 100px;
+    width: 130px;
+    top: 10px;
+    left: 1450px;
+    background-image: url(images/truck.png);
+    background-size: 100% 100%;
+    animation: none;
+}
+
+
+@keyframes travel {
+    50% {
+        left: 1450px;
+    }
+
+    to {
+        left: -200px;
+    }
+}
+
+#healthbar {
+    position: absolute;
+    top: 40px;
+    left: 230px;
+    height: 60px;
+    width: 250px;
+    background-image: url(images/health6.png);
+    background-size: 100% 100%;
+}
+
+
+
+#keysymbol {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 40px;
+    left: 550px;
+    background-image: url(images/keynull.png);
+    background-size: 100% 100%;
+    animation: none;
+}
+
+#winner {
+
+    position: absolute;
+    visibility: hidden;
+    width: 100px;
+    height: 100px;
+    top: 130px;
+    left: 1610px;
+    background-image: url(sprite/verrun.png);
+    bottom: 0px;
+    animation: none;
+}
+
+#winner2 {
+    position: absolute;
+    visibility: hidden;
+    width: 90px;
+    height: 80px;
+    top: 7px;
+    left: 1610px;
+    background-image: url(sprite/walk.png);
+    background-size: 1000px 100%;
+    transform: scaleX(-1);
+    bottom: 0px;
+    animation: none;
+}
+
+
+@keyframes walk2 {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -800px;
+    }
+}
+
+@keyframes walk3 {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -1000px;
+    }
+}
+
+@keyframes walkup {
+    0% {
+        top: 130px;
+        visibility: visible;
+    }
+
+    49.9% {
+        visibility: visible;
+    }
+
+    50% {
+        visibility: hidden;
+        top: 7px;
+    }
+}
+
+@keyframes walkleft {
+    49.9% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+        top: 7px;
+        left: 1610px;
+    }
+
+    100% {
+        visibility: visible;
+        top: 7px;
+        left: 1490px;
+    }
+}
