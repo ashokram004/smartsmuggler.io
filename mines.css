@@ -1,0 +1,85 @@
+#mine1 {
+    position: absolute;
+    left: 210px;
+    bottom: 1px;
+    height: 40px;
+    width: 80px;
+    background-image: url(images/mine2.png);
+    background-size: 100% 100%;
+}
+
+#mine2 {
+    position: absolute;
+    right: 110px;
+    top: 60px;
+    height: 40px;
+    width: 80px;
+    background-image: url(images/mine2.png);
+    background-size: 100% 100%;
+}
+
+#mine3 {
+    position: absolute;
+    left: 810px;
+    top: 360px;
+    height: 40px;
+    width: 80px;
+    background-image: url(images/mine2.png);
+    background-size: 100% 100%;
+}
+
+
+#fruitmine4 {
+    position: absolute;
+    left: 1110px;
+    top: 760px;
+    height: 40px;
+    width: 80px;
+    background-image: url(images/fruitmine.png);
+    background-size: 100% 100%;
+}
+
+#blast1 {
+    visibility: hidden;
+    position: absolute;
+    left: 150px;
+    bottom: -80px;
+    height: 200px;
+    width: 200px;
+    background-image: url(images/blast2.png);
+    animation: blast 1s steps(8) infinite;
+    animation-fill-mode: forwards;
+}
+
+#blast2 {
+    visibility: hidden;
+    position: absolute;
+    right: 50px;
+    top: -50px;
+    height: 200px;
+    width: 200px;
+    background-image: url(images/blast2.png);
+    animation: blast 1s steps(8) infinite;
+}
+
+#blast3 {
+    visibility: hidden;
+    position: absolute;
+    left: 750px;
+    top: 250px;
+    height: 200px;
+    width: 200px;
+    background-image: url(images/blast2.png);
+    animation: blast 1s steps(8) infinite;
+}
+
+
+@keyframes blast {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -1600px;
+    }
+}

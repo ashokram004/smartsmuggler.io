@@ -1,0 +1,112 @@
+#gamescreen {
+    visibility: visible;
+    transition: all 500ms;
+    animation: loa 5s;
+}
+
+@keyframes load1 {
+
+    0%,
+    99% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+
+    }
+}
+
+#pausebutton {
+    visibility: visible;
+    animation: load1 5s;
+}
+
+
+
+#policedep {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 10px;
+    right: -120px;
+}
+
+
+
+#sprint {
+    border: 2px solid black;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: yellow;
+    font-size: 20px;
+    height: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+#pausemenu {
+    visibility: hidden;
+    transform: scale(0.95);
+    transition: all 1000ms;
+    position: absolute;
+    border-radius: 100px;
+    top: 50px;
+    left: 410px;
+    height: 650px;
+    width: 1000px;
+}
+
+#pausebg {
+    position: absolute;
+    left: 75px;
+    height: 750px;
+    width: 950px;
+    border: none;
+    border-radius: 50px;
+    background-image: url("images/woodboard.png");
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+#pausebutton {
+
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    height: 80px;
+    width: 80px;
+    background: linear-gradient(orange, yellow);
+    border-radius: 30px;
+    box-shadow: 0px 1px 5px 1px orange;
+    transition: all 250ms;
+}
+
+#restart,
+#exit2 {
+
+    background-image: url("images/smallwood.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+    font-family: Impact;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    width: 250px;
+    height: 100px;
+    font-size: 50px;
+    font-weight: 500;
+    padding-top: 30px;
+    color: rgb(255, 115, 0);
+}
+
+#restart {
+    margin-top: 200px;
+}
+
+#exit2 {
+    margin-top: 100px;
+}

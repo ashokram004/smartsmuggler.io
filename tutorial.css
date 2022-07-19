@@ -1,0 +1,61 @@
+#tutbox 
+{
+    visibility: hidden;
+    position: absolute;
+    top: 150px;
+    left:405px;
+    height: 600px;
+    width: 1000px;
+    border: 10px solid yellow;
+    background-image: url(tutorial/fulltut.png);
+    background-size: 12000px 100%;
+    border-radius: 50px;
+    background-position: 0%;
+    font-size: 40px;
+    font-family: impact;
+    transform: scale(0.7);
+    transition: transform 250ms, visibility 250ms;
+}
+
+#tutleft
+{
+    position: absolute;
+    margin-top: 250px;
+    margin-left: -50px;
+    height: 100px;
+    width: 80px;
+    background-color: black;
+    background-image: url("images/leftarrow.png");
+    background-size: 100% 100%;
+    border: 5px solid yellow;
+    transition: all 250ms;
+}
+
+#tutright
+{
+    position: absolute;
+    margin-top: 250px;
+    right: -50px;
+    height: 100px;
+    width: 80px;
+    background-color: black;
+    background-image: url("images/rightarrow.png");
+    background-size: 100% 100%;
+    border: 5px solid yellow;
+    transition: all 250ms;
+}
+
+#tutok
+{
+    position: absolute;
+    margin-top: 570px;
+    right: 450px;
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    border: 5px solid yellow;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    transition: all 250ms;
+}

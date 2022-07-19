@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Smart Smuggler</title>
+
+    <link rel="icon" href="images/icon.png">
+    <link href="startcss.css" rel="stylesheet">
+    <link href="birds.css" rel="stylesheet">
+    <link rel="stylesheet" href="tutorial.css">
+
+    <script src="scriptstart.js"></script>
+    <script src="animations.js"></script>
+    <script src="tutorial.js"></script>
+</head>
+
+
+
+<body id="body" onload="zoomin()">
+
+    <div id="bgimg"><img src="images/junglebg2.png" width="100%" height="1200px"></div>
+    
+    <div id="bird"></div>
+
+    <div id="bgimgfront"><img src="images/junglebg2front.png" width="100%" height="1200px"></div>
+
+    <div id="main">
+
+        <div id="stand"><img src="images/straightwood.png" height="700px" width="80px"></div>
+
+        <div id="box">
+            <center>
+
+                <div id="text">
+                    <center>
+                        <div id="start"> <a href="levels.html">
+                                <p>Start </p>
+                            </a></div> <br>
+                        <div id="settings" onclick="opensettings()">
+                            <p>Settings</p>
+                        </div> <br>
+                        <div id="help" onclick="openhelp()">
+                            <p>Help</p>
+                        </div><br>
+                    </center>
+                </div>
+
+                <div id="text2">
+                    <center>
+                        <div id="character" onclick="openhero()">
+                            <p>Character</p>
+                        </div> <br>
+                        <div id="land" onclick="openbg()">
+                            <p>Land</p>
+                        </div> <br>
+                        <div id="reset" onclick="reset()">
+                            <p>Reset</p>
+                        </div> <br>
+                        <div id="savesettings" onclick="gobackhome()">
+                            <p style="color:black">Save</p>
+                        </div>
+                    </center>
+                </div>
+
+                <div id="text3">
+                    <center>
+                        <div id="controlsbutton" onclick="opencontrols()">
+                            <p>CONTROLS</p>
+                        </div> <br>
+                        <div id="tutorialbutton" onclick="opentutorial()">
+                            <p>TUTORIAL</p>
+                        </div> <br>
+                        <div id="helpback" onclick="gobackhome()">
+                            <p style="color:black">OK</p>
+                        </div>
+                    </center>
+                </div>
+
+            </center>
+        </div>
+
+
+        <div id="bird2"></div>
+
+    </div>
+    
+
+
+
+    <div id="vol" onclick="volchange()"></div>
+
+    
+
+
+    <div id="background">
+        <h1
+            style=" position:absolute; top:100px; left:780px; font-size:50px; font-family:'impact' ; letter-spacing:3px; color:orange">
+            LAND TYPE</h1>
+        <div id="bg1"
+            onclick="changebg('url(images/finalbg1.jpg)','bg1','url(images/bushh.png)','url(images/grassground.jpg)')">
+        </div>
+        <div id="bg2"
+            onclick="changebg('url(images/finalbg2.jpg)','bg2','url(images/bushh.png)','url(images/sandn6.jpg)')"></div>
+        <div id="bg3"
+            onclick="changebg('url(images/finalbg3.jpg)','bg3','url(images/snowbush.png)','url(images/snowground.jpg)')">
+        </div>
+        <div id="save" onclick="goback()">SAVE</div>
+    </div>
+
+
+
+    <div id="hero">
+        <h1
+            style=" position:absolute; top:100px; left:780px; font-size:50px; font-family:'impact' ; letter-spacing:3px; color:orange">
+            SELECT A HERO</h1>
+        <div id="hero1" onclick="changehero('url(images/hero1.jpg)','hero1')"></div>
+        <div id="hero2" onclick="changehero('url(images/hero2.jpg)','hero2')"></div>
+        <div id="hero3" onclick="changehero('url(images/hero3.jpg)','hero3')"></div>
+        <div id="savehero" onclick="goback()">SAVE</div>
+    </div>
+
+
+
+    <div id="controls">
+        <div id="controlsok" onclick="controlsgoback()">OK</div>
+    </div>
+
+    <div id="tutbox">
+        <div id="tutleft" onclick="slideleft()"></div>
+        <div id="tutright" onclick="slideright()"></div>
+        <div id="tutok" onclick="tutorialgoback()">OK</div>
+    </div>
+
+    <div id="profilebox">
+        <h1 id="pname"> NAME : </h1><br> 
+        <h1 id="pid"> PLAYER ID : </h1> <br>
+        <h1 id="pscore"> SCORE : </h1> <br>
+        <div id="logout" onclick="location.replace('index.html')">LOGOUT</div>
+    </div>
+
+    <div id="profile" onclick="displayprofile()"></div>
+
+    
+
+</body>
+
+</html>

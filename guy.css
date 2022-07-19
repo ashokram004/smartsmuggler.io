@@ -1,0 +1,48 @@
+#guy {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url(sprite/idle.png);
+    bottom: 0px;
+    animation: idle 4s steps(10) infinite;
+}
+
+@keyframes walk {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -1000px;
+    }
+}
+
+@keyframes walk2 {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -800px;
+    }
+}
+
+@keyframes idle {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -1000px;
+    }
+}
+
+@keyframes fall {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -500px;
+    }
+}

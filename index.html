@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="loginstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Smart Smuggler - LOGIN</title>
+
+  <link rel="stylesheet" href="birds.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="loginregister.js"></script>
+</head>
+
+
+
+
+<body>
+
+  <div id="totalbox">
+
+    <div class="loginbox">
+      <div id="form1">
+        <h1>Login</h1><br>
+        <input type="text" id="luserid" placeholder="Player ID" />
+        <input type="password" id="lpass" placeholder="Password" /><br>
+        <button id="logbutton">LOGIN</button>
+        <p onclick="gotoregister()">Create new account</p>
+      </div>
+    </div>
+
+    <div class="registerbox">
+      <div id="form2">
+        <h1>Register</h1><br>
+        <input type="text" id="rname" placeholder="Name" />
+        <input type="text" id="ruserid" placeholder="Player ID" />
+        <input type="password" id="rpass" placeholder="Password" /><br>
+        <button id="regbutton">REGISTER</button>
+        <p onclick="gotologin()">Already have an account</p>
+      </div>
+    </div>
+
+    <div id="cover"></div>
+
+  </div>
+
+  <div id="bird" style="z-index: 5;"></div>
+  <div id="bottom3d"></div>
+  <div id="bottomright3d"></div>
+  <div id="top3d"></div>
+  <div id="topleft3d"></div>
+  <div id="bird2" style="z-index: 5;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+import { getDatabase, ref , set, child , update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+
+const firebaseConfig = {
+      apiKey: "AIzaSyC1TTER2yD5Mb_TCAVi06jKx58QBthzfZk",
+      authDomain: "smart-smuggler.firebaseapp.com",
+      databaseURL: "https://smart-smuggler-default-rtdb.firebaseio.com",
+      projectId: "smart-smuggler",
+      storageBucket: "smart-smuggler.appspot.com",
+      messagingSenderId: "583625785627",
+      appId: "1:583625785627:web:2746f089ff5270ed9e53be",
+      measurementId: "G-YVVGZ9XWMJ"
+};
+  
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase();
+
+
+function register()
+{
+      var sname = document.getElementById("rname").value;
+      var sid = document.getElementById("ruserid").value;
+      var spass = document.getElementById("rpass").value;
+      var epass = CryptoJS.AES.encrypt(spass, "anits").toString();
+
+      var dbref = ref(db,"players/"+sid);
+
+      onValue(dbref,(snapshot) => {
+
+        if(snapshot.exists())
+        {
+          alert("User already taken");
+        }
+        else
+        {
+          set(dbref,{
+          name : sname,
+          userid : sid,
+          password : epass,
+          score : "0"
+          })
+          .then(()=>{
+            alert("Registration successful");
+            gotologin();
+          })
+          .catch(()=>{
+            alert("failed");
+          });
+        } 
+
+      }
+      ,{
+        onlyOnce : true } 
+      );
+}
+
+document.getElementById("regbutton").addEventListener('click',register);
+
+
+
+function login()
+{
+  var sid = document.getElementById("luserid").value;
+  var spass = document.getElementById("lpass").value;
+  
+  get(child(ref(db),"players/"+sid)).then((snapshot) => {
+    if(snapshot.exists())
+    {
+        var pass = snapshot.child('password').val();
+        var pass = CryptoJS.AES.decrypt(pass, "anits").toString(CryptoJS.enc.Utf8);
+
+        if(pass == spass)
+        {
+            var name = snapshot.child('name').val();
+            var userid = snapshot.child('userid').val();
+            var score = snapshot.child('score').val();
+            sessionStorage.setItem("name",name);
+            sessionStorage.setItem("userid",userid);
+            sessionStorage.setItem("score",score);
+            window.location.replace("start.html");
+        }
+        else
+        {
+            alert("wrong password");
+        }
+      
+    }
+    else 
+    {
+      alert("User doesn't exists");
+    }
+  });
+
+}
+
+document.getElementById("logbutton").addEventListener('click',login);
+
+
+</script>
+
+</body>
+
+</html>

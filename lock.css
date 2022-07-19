@@ -1,0 +1,109 @@
+#box {
+  visibility: hidden;
+  transform: scale(0.5);
+  position: absolute;
+  top: -80px;
+  left: 200px;
+  width: 350px;
+  background-color: silver;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px 1px black;
+}
+
+#box2 {
+  visibility: hidden;
+  transform: scale(0.5);
+  position: absolute;
+  top: -80px;
+  left: 900px;
+  width: 350px;
+  background-color: silver;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 1px 1px black;
+}
+
+
+
+input {
+  font-weight: bold;
+  padding: 25px;
+  color: rgb(87, 87, 87);
+  font-size: 25px;
+  cursor: pointer;
+  width: 70px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+
+input[type="text"] {
+
+  padding-left: 60px;
+  padding-right: 30px;
+  letter-spacing: 40px;
+  background-color: #C7E3E1;
+  outline: 2px solid black;
+  width: 230px;
+  color: black;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="button"] {
+  color: black;
+  margin-bottom: 10px;
+  background-color: gray;
+  box-shadow: 2px 2px 1px 1px black;
+  margin-left: 10px;
+  transition: all 100ms;
+}
+
+
+input[type="button"]:hover {
+  background-color: rgb(41, 38, 38);
+  color: white;
+}
+
+input[type="button"]:active,
+button:active {
+  transform: scale(0.8);
+}
+
+#clear {
+  color: #fff;
+  background-color: rgb(255, 25, 25);
+}
+
+
+#check {
+  border: none;
+  background-color: rgb(41, 38, 38);
+  padding: 8px;
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  width: 95%;
+  height: 70px;
+  font-size: 40px;
+  transition: all 100ms;
+}
+
+#lockback 
+{
+  padding-left: 10px;
+  background-color: rgb(0, 170, 113);
+  color: black;
+}
+
+#lockback:hover 
+{
+  background-color: rgb(0, 170, 113);
+  color: black;
+}

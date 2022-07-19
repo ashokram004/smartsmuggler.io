@@ -1,0 +1,41 @@
+#dog {
+    position: absolute;
+    bottom: 600px;
+    left: 900px;
+    width: 100px;
+    height: 100px;
+    background-image: url("sprite/dogleft.png");
+    animation: dog_walk 1s steps(4) infinite;
+    animation-play-state: running;
+}
+
+@keyframes dog_walk {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -400px;
+    }
+}
+
+#dog2 {
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    width: 100px;
+    height: 100px;
+    background-image: url("sprite/dogup.png");
+    animation: dog_walk 1s steps(4) infinite;
+    animation-play-state: running;
+}
+
+@keyframes dog_walk {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -400px;
+    }
+}

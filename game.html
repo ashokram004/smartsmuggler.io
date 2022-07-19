@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Smuggle It</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="playground.css">
+    <link rel="stylesheet" href="guy.css">
+    <link rel="stylesheet" href="coin.css">
+    <link rel="stylesheet" href="birds.css">
+    <link rel="stylesheet" href="dog.css">
+    <link rel="stylesheet" href="loadingscreen.css">
+    <link rel="stylesheet" href="winboard.css">
+    <link rel="stylesheet" href="failboard.css">
+    <link rel="stylesheet" href="mines.css">
+    <link rel="stylesheet" href="backgroundlevel1.css">
+
+    <script src="scriptlevel1.js"></script>
+    <script src="scriptstart.js"></script>
+
+
+</head>
+
+
+<body onload="dog_move()" id="body">
+    
+    <div id="loadingscreen">
+        <img src="images/junglebg2.png" width="100%" height="1200px" id="loadbg" style="margin-top: -10px; margin-left:-10px;">
+        <div  id="loadwalk">
+        </div>
+        <h1 id="loadtext">LOADING...</h1>
+        <div id="loadbar"><img src="images/loadwood3.png" id="loadwood"></div>
+    </div>
+
+
+<center>
+    <div id="gamescreen">
+
+    
+
+    <div id="exit">EXIT</div>
+    
+    <img src="images/policedep.png" alt="police" id="police">
+
+    
+    <div id="block">
+   
+        
+
+            
+            <div id="mine1"></div>
+            <div id="mine2"></div>
+            <div id="mine3"></div>
+            
+            <div id="dog"></div>
+            <div id="guy"></div>
+            <div id="blast1"></div>
+            <div id="blast2"></div>
+            <div id="blast3"></div>
+            <div id="sandal"></div>
+            <div id="bush1"></div>
+            <div id="bush2"></div>
+            <div id="coin"></div>
+
+            
+            
+        
+        
+
+        <div id="board">
+            <img src="images/star.png" id="star">
+            <h1>LEVEL PASSED</h1>
+            <a href="levels.html"><button>Next</button></a>
+        </div>
+
+        <div id="failboard">
+            <h1>LEVEL FAILED</h1>
+            <button onclick="location.reload()">Try Again</button>
+        </div>
+
+        
+    </div>
+
+    
+
+
+    <div id="tree"></div>
+    <div id="tree2"></div>
+
+
+    <div id="exitgate"></div>
+    <div id="entrygate"></div>
+    
+    <div id="bird"></div>
+    <div id="bird2"></div>
+    <div id="entry">E <br> N <br> T <br> R <br> Y</div>
+    <!-- <button id="sprint" onclick="changeSprint()">Sprint Off</button> -->
+
+    
+    
+</div>
+
+
+
+<div id="winner2"></div>
+<div id="winner"></div>
+
+
+<div id="truck"></div>
+
+<div id="pausebutton" onclick="pause()"><img id="pausepic" src="images/pause2.png" height="50%" width="50%" style="margin-top: 20px;"></div> 
+<div id="pausemenu">
+    <div id="pausebg">
+        <div id="restart" onclick="location.reload()">RESTART</div>
+        <a style="text-decoration:none" href="start.html"><div id="exit2">EXIT</div></a>
+    </div>
+</div>
+
+
+</center>
+
+</body>
+
+
+</html>

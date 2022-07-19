@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url(images/junglebg2.png);
+	background-size: 100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+    
+}
+
+p {
+	font-size: 13px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+    cursor: pointer;
+}
+
+span {
+	font-size: 12px;
+}
+
+
+button {
+    cursor: pointer;
+	border-radius: 20px;
+	border: 1px solid #24fe41;
+	background-color: #4bdbff;
+    border-color: #4bdbff;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	transition: transform 80ms ease-in;
+}
+
+#form1,#form2 {
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+    border-radius: 10px;
+	padding: 12px 15px;
+	margin: 8px 0;
+    font-size: 20px;
+	width: 300px;
+}
+
+#totalbox {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 1000px;
+	height: 680px;
+}
+
+
+
+.loginbox {
+    background-color: #50d662;
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.registerbox {
+    background: #50d662;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	position: absolute;
+    color: #000000;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+}
+
+#regbutton 
+{
+    background-color: #4bdbff;
+    border-color: #4bdbff;
+}
+
+#cover
+{
+    background : url(images/cover2.png);
+	background-size: 200% 100%;
+	background-position: 100%;
+    position: absolute;
+	top: 0;
+	height: 100%;
+	left: 50%;
+	width: 50%;
+	z-index: 2;
+    transition: all 700ms;
+}
+
+#bottom3d
+{
+	position: absolute;
+	bottom: -25px;
+	left: 0px;
+	height: 364px;
+	width: 700px;
+	background: url("images/botleft.png");
+	background-size: 100% 100%;
+	z-index: 6;
+
+}
+
+#bottomright3d
+{
+	position: absolute;
+	bottom: -39px;
+	right:0px;
+	height: 370px;
+	width: 985px;
+	background: url("images/botright.png");
+	background-size: 100% 100%;
+	z-index: 4;
+
+}
+
+#top3d
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 335px;
+	width: 1040px;
+	background: url("images/topright.png");
+	background-size: 100% 100%;
+	z-index: 6;
+
+}
+
+#topleft3d
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 275px;
+	width: 720px;
+	background: url("images/topleft.png");
+	background-size: 100% 100%;
+	z-index: 4;
+
+}
+
+
+
+
+
+
+
+

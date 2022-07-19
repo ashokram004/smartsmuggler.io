@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Smart Smuggler - Level 1</title>
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="playground.css">
+  <link rel="stylesheet" href="guy.css">
+  <link rel="stylesheet" href="coin.css">
+  <link rel="stylesheet" href="birds.css">
+  <link rel="stylesheet" href="dog.css">
+  <link rel="stylesheet" href="loadingscreen.css">
+  <link rel="stylesheet" href="winboard.css">
+  <link rel="stylesheet" href="failboard.css">
+  <link rel="stylesheet" href="mines.css">
+  <link rel="stylesheet" href="backgroundlevel1.css">
+  <link rel="stylesheet" href="lock.css" />
+
+
+  <script src="scriptlevel1.js"></script>
+  <script src="scriptstart.js"></script>
+
+
+</head>
+
+
+<body onload="dog_move(); healthchange(); dog2move()" id="body">
+
+  <div id="loadingscreen">
+    <img src="images/junglebg2.png" width="100%" height="1200px" id="loadbg"
+      style="margin-top: -10px; margin-left:-10px;">
+    <div id="loadwalk">
+    </div>
+    <h1 id="loadtext">LOADING...</h1>
+    <div id="loadbar"><img src="images/loadwood3.png" id="loadwood"></div>
+  </div>
+
+
+  <center>
+    <div id="gamescreen">
+
+
+
+      <div id="exit">EXIT</div>
+
+      <img src="images/policedep.png" alt="police" id="policedep">
+
+
+      <div id="block">
+
+
+
+
+        <div id="mine1"></div>
+        <div id="mine2"></div>
+        <div id="mine3"></div>
+
+        <div id="dog"></div>
+        <div id="dog2" style="left: 300px;"></div>
+        <div id="key"></div>
+        <div id="guy"></div>
+        <div id="blast1"></div>
+        <div id="blast2"></div>
+        <div id="blast3"></div>
+        <div id="sandal"></div>
+        <div id="cage"></div>
+
+        <div id="bush1"></div>
+        <div id="bush2"></div>
+        <div id="bush3"></div>
+        <div id="bush4"></div>
+        <div id="bush5"></div>
+        <div id="coin"></div>
+
+
+
+
+
+
+        <div id="board">
+          <img src="images/star.png" id="star">
+          <h1>LEVEL PASSED</h1>
+          <button id="nextbutton">Next</button>
+        </div>
+
+        <div id="failboard">
+          <h1>LEVEL FAILED</h1>
+          <button onclick="location.reload()">Try Again</button>
+          <a href="levels.html" style="text-decoration: none;"><button id="bexit">Exit</button></a>
+        </div>
+
+
+      </div>
+
+
+
+
+      <div id="tree2"></div>
+      <div id="tree3"></div>
+      <div id="tree4"></div>
+      <div id="tree5"></div>
+      <div id="tree6"></div>
+      <div id="tree7"></div>
+      <div id="tree8"></div>
+
+
+
+      <div id="exitgate"></div>
+      <div id="entrygate"></div>
+
+      <div id="bird"></div>
+      <div id="bird2"></div>
+      <div id="entry">E <br> N <br> T <br> R <br> Y</div>
+      <!-- <button id="sprint" onclick="changeSprint()">Sprint Off</button> -->
+
+
+
+    </div>
+
+
+
+    <div id="winner2"></div>
+    <div id="winner"></div>
+
+
+    <div id="truck"></div>
+    <div id="keysymbol"></div>
+    <div id="healthbar"></div>
+
+    <div id="pausebutton" onclick="pause()"><img id="pausepic" src="images/pause2.png" height="50%" width="50%"
+        style="margin-top: 20px;"></div>
+    <div id="pausemenu">
+      <div id="pausebg">
+        <div id="restart" onclick="location.reload()">RESTART</div>
+        <a style="text-decoration:none" href="levels.html">
+          <div id="exit2">EXIT</div>
+        </a>
+      </div>
+    </div>
+
+
+  </center>
+
+
+
+
+
+
+  <script type="module">
+       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getDatabase, ref , set, child , update, remove, onValue, get } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+                
+        const firebaseConfig = {
+                      apiKey: "AIzaSyC1TTER2yD5Mb_TCAVi06jKx58QBthzfZk",
+                      authDomain: "smart-smuggler.firebaseapp.com",
+                      databaseURL: "https://smart-smuggler-default-rtdb.firebaseio.com",
+                      projectId: "smart-smuggler",
+                      storageBucket: "smart-smuggler.appspot.com",
+                      messagingSenderId: "583625785627",
+                      appId: "1:583625785627:web:2746f089ff5270ed9e53be",
+                      measurementId: "G-YVVGZ9XWMJ"
+                };
+                  
+                
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function savescore()
+        {
+          
+                var sid = sessionStorage.getItem("userid");
+                
+                var dbref = ref(db,"players/"+sid);
+          
+                onValue(dbref,(snapshot) => {
+          
+  
+                    set(dbref,{
+                    name : snapshot.child('name').val(),
+                    userid : snapshot.child('userid').val(),
+                    password : snapshot.child('password').val(),
+                    score : sessionStorage.getItem("score")
+                    });
+                    } 
+                      ,{
+                          onlyOnce : true } 
+                );
+
+                document.getElementById("nextbutton").innerHTML="SAVING...";
+
+                await sleep(3000);
+                location.replace("levels.html");
+        }        
+
+
+        document.getElementById("nextbutton").addEventListener('click',savescore);
+  </script>
+
+</body>
+
+
+</html>
