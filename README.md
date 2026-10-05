@@ -1,4 +1,6 @@
-> **NO AI USED**
+# 🌟🌟🌟
+#  **ＮＯ ＡＩ ＵＳＥＤ** 
+# 🌟🌟🌟
 
 Live Demo :  https://smartsmuggler.netlify.app/
 
@@ -19,3 +21,5 @@ Open `index.html` and enjoy the game. This is a static, vanilla JavaScript proje
 - `css/` - stylesheets
 - `js/` - JavaScript files
 - `assets/` - images, sprites, music, and other game assets
+
+> AI was used only to restructure the project folders and update file paths. No game functionality or styling was changed.
