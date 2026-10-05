@@ -1,6 +1,4 @@
-# 🌟🌟🌟
 #  **ＮＯ ＡＩ ＵＳＥＤ** 
-# 🌟🌟🌟
 
 Live Demo :  https://smartsmuggler.netlify.app/
 
